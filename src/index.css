@@ -1,13 +1,833 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --whites: #d9d9d2;
+  --black: #000000;
+  --light-black: #0e0e10;
+  --rich-lightblack: #0e0e10;
+  --dull-black: #0e0e10;
+  --yellow: #0793ff;
+  --opa-black: rgb(10, 10, 11);
+  --fortext: #a5a5a5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Text color classes */
+.fortext {
+  color: var(--fortext);
+}
+.text-whites {
+  color: var(--whites);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-light-black {
+  color: var(--light-black);
+}
+
+.text-rich-lightblack {
+  color: var(--rich-lightblack);
+}
+
+.text-dull-black {
+  color: var(--dull-black);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+.text-opa-black {
+  color: var(--opa-black);
+}
+
+/* Background color classes */
+.bg-whites {
+  background-color: var(--whites);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-light-black {
+  background-color: var(--light-black);
+}
+
+.bg-rich-lightblack {
+  background-color: var(--rich-lightblack);
+}
+
+.bg-dull-black {
+  background-color: var(--dull-black);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-opa-black {
+  background-color: var(--opa-black);
+}
+.border-yellow {
+  border: 2px solid var(--yellow);
+}
+body {
+  background-color: var(--black);
+}
+.bg {
+}
+
+/** TXT **/
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.kanit-extralight {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kanit-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-black {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.kanit-thin-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.kanit-extralight-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kanit-light-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kanit-regular-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kanit-semibold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kanit-bold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.kanit-extrabold-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.kanit-black-italic {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/** MAIN **/
+
+/** COL1 **/
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: #369;
+  --secondary: rgb(53, 50, 50);
+  --size: 60px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    var(--yellow) calc(var(--percentage) * 1%),
+    var(--secondary) 0
+  );
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--whites);
+}
+@media (max-width: 576px) {
+  [role="progressbar"] {
+    --size: 100px;
+  }
+}
+
+:root {
+  --progress-bar-color: #cfd8dc;
+  --progress-value-color: #2196f3;
+  --progress-empty-color-h: 4.1;
+  --progress-empty-color-s: 89.6;
+  --progress-empty-color-l: 58.4;
+  --progress-filled-color-h: 122.4;
+  --progress-filled-color-s: 39.4;
+  --progress-filled-color-l: 49.2;
+}
+
+progress[value] {
+  display: block;
+  position: relative;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border: 0;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+  counter-reset: progress var(--progress-value);
+  --progress-value-string: counter(progress) "%";
+  --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+  --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+  @supports selector(::-moz-progress-bar) {
+    --progress-value-decimal: calc(var(--value, 0) / var(--max, 0));
+  }
+  --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+  --progress-value-color: hsl(
+    calc(
+        (
+            var(--progress-empty-color-h) +
+              (var(--progress-filled-color-h) - var(--progress-empty-color-h)) *
+              var(--progress-value-decimal)
+          ) * 1deg
+      )
+      calc(
+        (
+            var(--progress-empty-color-s) +
+              (var(--progress-filled-color-s) - var(--progress-empty-color-s)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+      calc(
+        (
+            var(--progress-empty-color-l) +
+              (var(--progress-filled-color-l) - var(--progress-empty-color-l)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+  );
+  animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
+    progress;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--dull-black);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+progress[value]::-webkit-progress-value {
+  width: var(--progress-value-percent) !important;
+  background-color: var(--yellow);
+  border-radius: var(--border-radius);
+}
+
+progress[value]::-moz-progress-bar {
+  width: var(--progress-value-percent) !important;
+  background-color: var(--yellow);
+  border-radius: var(--border-radius);
+}
+
+@keyframes progress {
+  from {
+    --progress-value: 0;
+  }
+  to {
+    --progress-value: var(--value);
+  }
+}
+
+@property --progress-value {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --progress-bar-color: #cfd8dc;
+  --progress-value-color: #2196f3;
+  --progress-empty-color-h: 4.1;
+  --progress-empty-color-s: 89.6;
+  --progress-empty-color-l: 58.4;
+  --progress-filled-color-h: 122.4;
+  --progress-filled-color-s: 39.4;
+  --progress-filled-color-l: 49.2;
+}
+
+progress[value] {
+  display: block;
+  position: relative;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border: 0;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+  counter-reset: progress var(--progress-value);
+  --progress-value-string: counter(progress) "%";
+  --progress-max-decimal: calc(var(--value, 0) / var(--max, 0));
+  --progress-value-decimal: calc(var(--progress-value, 0) / var(--max, 0));
+  @supports selector(::-moz-progress-bar) {
+    --progress-value-decimal: calc(var(--value, 0) / var(--max, 0));
+  }
+  --progress-value-percent: calc(var(--progress-value-decimal) * 100%);
+  --progress-value-color: hsl(
+    calc(
+        (
+            var(--progress-empty-color-h) +
+              (var(--progress-filled-color-h) - var(--progress-empty-color-h)) *
+              var(--progress-value-decimal)
+          ) * 1deg
+      )
+      calc(
+        (
+            var(--progress-empty-color-s) +
+              (var(--progress-filled-color-s) - var(--progress-empty-color-s)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+      calc(
+        (
+            var(--progress-empty-color-l) +
+              (var(--progress-filled-color-l) - var(--progress-empty-color-l)) *
+              var(--progress-value-decimal)
+          ) * 1%
+      )
+  );
+  animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
+    progress;
+}
+
+@keyframes progress {
+  from {
+    --progress-value: 0;
+  }
+  to {
+    --progress-value: var(--value);
+  }
+}
+
+/* Styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 5px; /* width of the scrollbar */
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dull-black); /* color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4f4e4e; /* color of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the handle on hover */
+}
+
+svg {
+  cursor: pointer;
+}
+
+.bg {
+  background-image: url("https://th.bing.com/th/id/R.8ecbcdc4a2acfe67fa58ff560748655d?rik=7xtFwqmDTEmgLA&pid=ImgRaw&r=0"); /* replace 'background.jpg' with your image path */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+}
+@media only screen and (max-width: 768px) {
+  .bg {
+    height: 400px;
+  }
+}
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9) 15%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: "Web Developer";
+  color: var(--yellow);
+  animation: words 20s infinite;
+}
+
+.animated-text span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+@media only screen and (max-width: 768px) {
+  .animated-text {
+    position: relative;
+    text-align: center; /* Center the text */
+  }
+}
+@keyframes cursor {
+  to {
+    border-left: 10px solid var(--dull-black);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: " Web-Developer";
+    font-size: 32px;
+  }
+  21%,
+  40% {
+    content: " Web-Designer";
+    font-size: 32px;
+  }
+  41%,
+  60% {
+    content: " UI-designer";
+    font-size: 32px;
+  }
+  61%,
+  80% {
+    content: " Mern-Developer";
+    font-size: 32px;
+  }
+  81%,
+  100% {
+    content: " Wordpress-Developer";
+    font-size: 26px;
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+.button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--yellow);
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::after,
+.type1::before {
+  content: "";
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::after {
+  content: "CONTACT";
+  background-color: var(--yellow);
+  transform: translateY(50px);
+}
+
+.type1::before {
+  content: "CONTACT";
+  background-color: var(--dull-black);
+  color: var(--yellow);
+  transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(90deg) var(--black);
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    left: 50%; /* Shift the cursor to the center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-limit {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .text-limit-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .text-limit-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}
+@media (max-width: 1200px) {
+  .text-limit-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}
+.ReadMore {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.ReadMore {
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ReadMore p {
+  margin: 0;
+  position: relative;
+  font-size: 14px;
+  transition: 0.2s;
+  transition-delay: 0.1s;
+  letter-spacing: 1px;
+  color: var(--yellow);
+}
+.ReadMore p:hover {
+  color: var(--whites);
+}
+
+.ReadMore:hover svg {
+  transform: translateX(5px);
+}
+
+.ReadMore svg {
+  color: var(--yellow);
+  transition: 0.2s;
+  position: relative;
+  width: 10px;
+  transition-delay: 0.1s;
+}
+.price_box {
+  transition: 0.3s ease;
+  position: relative;
+}
+.price_box:hover {
+  transform: scale(103%); /* Center horizontally */
+}
+.box1 {
+  transition: 0.3s ease;
+  position: relative;
+}
+.box1:hover {
+  transform: scale(102%); /* Center horizontally */
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 3px;
+  background-color: var(--whites);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/*--------------------------------------*/
+
+.sliderr {
+  padding-top: 80px !important;
+}
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 29px;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--yellow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+.section1 {
+  overflow-x: hidden;
+  height: 94.21vh;
+  overflow-y: auto;
+}
+.section2 {
+  overflow-y: auto;
+  height: 94.21vh;
+  overflow-x: hidden;
+}
+@media (max-width: 930px) {
+  .section2 {
+    height: 100% !important;
+  }
+  .section1 {
+    height: 100% !important;
+  }
+}
+.hm {
+  transition: 0.3s ease-in;
+}
+.hm:hover {
+  color: var(--yellow);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--yellow) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--yellow) !important;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+}
+html {
+  scroll-behavior: smooth;
 }
