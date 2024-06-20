@@ -156,7 +156,7 @@ const Section5 = () => {
                     key={index}
                   >
                     <div
-                      style={{ height: "400px" }}
+                      style={{ minHeight: "400px" }}
                       className="bg-opa-black shadow"
                     >
                       <div className="col-12">
