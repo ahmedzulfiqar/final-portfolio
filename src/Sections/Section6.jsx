@@ -41,7 +41,7 @@ const Section6 = () => {
             My Projects
           </h3>
         </div>
-        <div className="row mx-1">
+        <div className="row mx-0">
           {projectsData.map((project, index) => (
             <div className="col-lg-6 col-12 mb-3" key={index}>
               <div className="box1 bg-opa-black shadow ">

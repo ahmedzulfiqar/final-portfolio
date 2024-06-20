@@ -5,7 +5,7 @@ const Section1 = () => {
     <div>
       {" "}
       <div className="d-md-block d-none ">
-        <div className="row mx-2 rounded p-2 mt-1 bg-dull-black shadow  ">
+        <div className="row mx-0 rounded p-2 mt-0 bg-dull-black shadow  ">
           <div className="col-md-1 col-2 py-md-0 py-1  ">
             <a href="">
               <svg

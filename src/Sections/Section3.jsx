@@ -2,8 +2,8 @@ import React from "react";
 
 const Section3 = () => {
   return (
-    <div>
-      <div className="row m-0 mt-3 mx-md-1">
+    <div className="m-0 p-0 ">
+      <div className="row m-0 mt-3 mx-md-0">
         <div className="col-lg-3 col-6 d-flex justify-content-center align-items-center text-center ">
           <div className="box1 bg-opa-black px-md-5 px-1 mt-md-0 mb-md-2  py-3 shadow">
             <h3 className="text-yellow">3+</h3>

@@ -53,7 +53,7 @@ const Section7 = () => {
 
   return (
     <div>
-      <div className="row m-0 mx-3 d-md-block d-none">
+      <div className="row m-0 mx-0 d-md-block d-none">
         <div className="col-12">
           <h3 className="text-whites  mb-3 text-md-start text-center text-uppercase fs-4">
             testimonials

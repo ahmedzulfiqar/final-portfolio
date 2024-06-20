@@ -13,7 +13,7 @@ const Col2 = () => {
   return (
     <>
       <motion.div
-        className="bg-rich-lightblack p-md-2 "
+        className="bg-rich-lightblack p-md-2 pt-0 "
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 1 }}
@@ -21,10 +21,11 @@ const Col2 = () => {
       >
         <Section1 />
         <Section2 />
-        <Section3 /> <Section5 />
+        <Section5 />
         <Section4 />
         <Section6 />
         <Section7 />
+        <Section1 />
       </motion.div>
     </>
   );

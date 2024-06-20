@@ -8,7 +8,7 @@ const Section5 = () => {
   const pricePlans = [
     {
       title: "Basic Plan",
-      price: "69.99",
+      price: "100",
       features: [
         "Customized responsive design (1-5 pages)",
         "Basic animations (hover effects, simple transitions)",
@@ -21,7 +21,7 @@ const Section5 = () => {
     },
     {
       title: "Standard Plan",
-      price: "119.99",
+      price: "350",
       features: [
         "Enhanced responsive design (up to 10 pages)",
         "Advanced animations and interactive elements",
@@ -36,7 +36,7 @@ const Section5 = () => {
     },
     {
       title: "Premium Plan",
-      price: "129.99",
+      price: "custom",
       features: [
         "Fully customized, unique design (unlimited pages)",
         "Advanced animations and interactive experiences (parallax scrolling, custom illustrations)",
