@@ -6,48 +6,27 @@ import "swiper/css/pagination";
 const Section7 = () => {
   const testimonials = [
     {
-      img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-      name: "John Doe",
-      country: "USA",
-      review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      img: "https://scontent.cdninstagram.com/v/t51.2885-19/383843427_286269110963237_1890477768031356002_n.jpg?stp=dst-jpg_s80x80&_nc_cat=100&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=zdKf80gVHEAQ7kNvgHSrk_m&_nc_ht=scontent.cdninstagram.com&oh=00_AYDeUvVio_jCoW3_lgk4mSL6SgBQpqHy_viRL7a0uUE01g&oe=667B1A9D",
+      name: "Opran Studio",
+      country: "Slovenia",
+      review:
+        "it was good, you’re very committed to work, you know what you are doing, you gave me many options from the start already and you listen well to what clients want🙌",
       stars: "★★★★★",
     },
     {
-      img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-      name: "Alice Johnson",
-      country: "Canada",
-      review: "Sed eu ipsum eget sapien maximus dignissim.",
+      img: "https://api.tipeee.com/cache/20240505093408/media/200/200/zoom/2353367/202405056637366f99282.png",
+      name: "Remi Portman",
+      country: "France",
+      review:
+        "the website you created for me suits my expectations my universe has been well transcribed by webdevify",
       stars: "★★★★☆",
     },
     {
       img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
       name: "Emily Davis",
       country: "UK",
-      review: "Vestibulum convallis mi a turpis fermentum.",
+      review: "Webdevify. created an amazing, user friendly website. Outstanding service!",
       stars: "★★★★★",
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-      name: "Mike Brown",
-      country: "Australia",
-      review:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-      stars: "★★★☆☆",
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-      name: "Jane Smith",
-      country: "Germany",
-      review: "Fusce nec velit vitae odio tincidunt tristique.",
-      stars: "★★★★★",
-    },
-    {
-      img: "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-      name: "David Wilson",
-      country: "France",
-      review:
-        "Curabitur quis felis nec leo ultricies ullamcorper nec non mauris.",
-      stars: "★★★☆☆",
     },
   ];
 
@@ -74,14 +53,14 @@ const Section7 = () => {
               <SwiperSlide key={index} className="pb-4">
                 <div className=" my-2 mb-3" key={index}>
                   <div
-                    style={{ height: "350px" }}
+                    style={{ minHeight: "350px" }}
                     className=" bg-opa-black shadow"
                   >
                     <div className="col-12 px-3 mx-2 pt-2">
                       <img
                         src={testimonial.img}
                         alt=""
-                        className="img-fluid  w-25 rounded-circle border border-white border-5  mt-4"
+                        className="img-fluid  w-25 rounded-circle border border-primary border-5  mt-4"
                         style={{}}
                       />
                       <h6 className="text-whites mt-3">{testimonial.name}</h6>

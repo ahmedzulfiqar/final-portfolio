@@ -19,7 +19,9 @@ const Col2 = () => {
         transition={{ delay: 1, duration: 1 }}
         viewport={{ once: true }}
       >
-        <Section1 />
+        <div className="div d-md-block d-none">
+          <Section1 />
+        </div>
         <Section2 />
         <Section5 />
         <Section4 />

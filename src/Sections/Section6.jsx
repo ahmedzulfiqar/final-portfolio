@@ -1,5 +1,8 @@
 import React from "react";
 import img from "../media/Screenshot 2024-04-14 175712.png";
+import img1 from "../media/scrnli_2_26_2024_2-45-18 PM.png";
+import img2 from "../media/image.png";
+import img3 from "../media/scrnli_6_21_2024_4-22-03 PM.png";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -14,22 +17,22 @@ const Section6 = () => {
       img: img,
     },
     {
-      a: "",
+      a: "https://remiportman.netlify.app/home",
       id: 1,
-      title: "Roshan Studio",
-      img: img,
+      title: "Remi Portman",
+      img: img1,
     },
     {
       a: "",
       id: 1,
       title: "Roshan Studio",
-      img: img,
+      img: img3,
     },
     {
       a: "",
       id: 1,
-      title: "Roshan Studio",
-      img: img,
+      title: "Opran Studio",
+      img: img2,
     },
   ];
   return (
@@ -79,25 +82,23 @@ const Section6 = () => {
           ))}
         </div>
       </div>
-
-
       <div className="row mt-3 m-0 d-md-none d-block">
         <div className="col-12">
           <h3 className="text-whites mx-3 mb-3 text-md-start text-center text-uppercase fs-4">
             My Projects
           </h3>
         </div>
-          <div className="col-12 ">
-            <Swiper
-              draggable={true}
-              grabCursor={true}
-              className="mySwiper"
-              slidesPerView={1}
-              modules={[Autoplay, Pagination]}
-              autoplay={true}
-              spaceBetween={14}
-              pagination={{ clickable: true }}
-            >
+        <div className="col-12 ">
+          <Swiper
+            draggable={true}
+            grabCursor={true}
+            className="mySwiper"
+            slidesPerView={1}
+            modules={[Autoplay, Pagination]}
+            autoplay={true}
+            spaceBetween={14}
+            pagination={{ clickable: true }}
+          >
             {projectsData.map((project, index) => (
               <SwiperSlide key={index} className="pb-4">
                 <div className="col-lg-6 col-12 mb-3" key={index}>
